@@ -32,9 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Connexion</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <?php include 'includes/header.php'; ?>
+<?php if (isset($_GET['logout'])): ?>
+    <p style="color: green;">✅ Vous avez été déconnecté avec succès.</p>
+<?php endif; ?>
 
     <?php if (isset($_GET['logout'])): ?>
         <p style="color: green;">✅ Vous avez été déconnecté avec succès.</p>
