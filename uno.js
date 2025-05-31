@@ -1,6 +1,6 @@
 // Fonctions principales
 function createGame() {
-    fetch('../jeu.php?action=create')
+    fetch('jeu.php?action=create')
         .then(response => response.json())
         .then(data => {
             if (data.success) {
@@ -10,7 +10,7 @@ function createGame() {
 }
 
 function joinGame(gameId) {
-    fetch(`../jeu.php?action=join&game_id=${gameId}`)
+    fetch(`jeu.php?action=join&game_id=${gameId}`)
         .then(response => response.json())
         .then(data => {
             if (data.success) {
@@ -23,7 +23,7 @@ function joinGame(gameId) {
 function updateGameState() {
     if (!document.querySelector('.game-board')) return;
 
-    fetch('../ajax/get_game_state.php')
+    fetch('get_game_state.php')
         .then(response => response.json())
         .then(data => {
             updateGameUI(data);

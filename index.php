@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/db.php';
+require_once 'db.php';
 
 $error = "";
 
@@ -30,17 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <title>Connexion</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'header.php'; ?>
 <?php if (isset($_GET['logout'])): ?>
     <p style="color: green;">✅ Vous avez été déconnecté avec succès.</p>
 <?php endif; ?>
 
-    <?php if (isset($_GET['logout'])): ?>
-        <p style="color: green;">✅ Vous avez été déconnecté avec succès.</p>
-    <?php endif; ?>
 
     <h2>Connexion</h2>
     <form method="POST" action="">
@@ -52,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (!empty($error))
         echo "<p style='color:red;'>$error</p>"; ?>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

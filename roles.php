@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-require_once 'includes/db.php';
+require_once 'db.php';
 
 $message = '';
 
@@ -33,7 +33,7 @@ if (isset($_GET['supprimer'])) {
 $roles = $conn->query("SELECT * FROM role")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <h2>Gestion des rôles</h2>
 
@@ -75,7 +75,7 @@ $roles = $conn->query("SELECT * FROM role")->fetchAll(PDO::FETCH_ASSOC);
     </tbody>
 </table>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 <style>
     /* Formulaire d'ajout de rôles */

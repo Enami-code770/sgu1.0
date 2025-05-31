@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-require_once 'includes/db.php';
+require_once 'db.php';
 
 // Messages
 $message = "";
@@ -44,7 +44,7 @@ $comptes = $conn->query("SELECT compte.*, utilisateur.nom, utilisateur.prenom FR
 $utilisateurs = $conn->query("SELECT id_user, nom, prenom FROM utilisateur")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <h2>Gestion des comptes</h2>
 
@@ -95,7 +95,7 @@ $utilisateurs = $conn->query("SELECT id_user, nom, prenom FROM utilisateur")->fe
     </tbody>
 </table>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 <style>
     /* Formulaire d'ajout de comptes */

@@ -1,16 +1,16 @@
 <?php
-require_once '../includes/db.php';
+require_once 'db.php';
 session_start();
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../index.php?error=not_logged_in');
+    header('Location: index.php?error=not_logged_in');
     exit();
 }
 
 // Inclure les composants du jeu
-require_once 'includes/game.inc.php';
-require_once 'includes/deck.inc.php';
+require_once 'game.inc.php';
+require_once 'deck.inc.php';
 
 // Gérer les actions
 $action = $_GET['action'] ?? '';
@@ -36,7 +36,7 @@ $available_games = get_available_games($conn);
 <head>
     <meta charset="UTF-8">
     <title>UNO - AquaServ</title>
-    <link rel="stylesheet" href="assets/css/uno.css">
+    <link rel="stylesheet" href="uno.css">
 </head>
 <body>
     <div class="uno-container">
@@ -68,6 +68,6 @@ $available_games = get_available_games($conn);
         <?php endif; ?>
     </div>
 
-    <script src="assets/js/uno.js"></script>
+    <script src="uno.js"></script>
 </body>
 </html>

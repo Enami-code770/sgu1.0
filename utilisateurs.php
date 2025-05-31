@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-require_once 'includes/db.php';
+require_once 'db.php';
 
 // Ajouter ou modifier un utilisateur
 if (isset($_POST['ajouter']) || isset($_POST['modifier'])) {
@@ -69,11 +69,11 @@ if (!empty($recherche)) {
 $roles = $conn->query("SELECT * FROM role")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <head>
     <title>Gestion des utilisateurs</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <h2>Gestion des utilisateurs</h2>
@@ -146,4 +146,4 @@ $roles = $conn->query("SELECT * FROM role")->fetchAll(PDO::FETCH_ASSOC);
     </tbody>
 </table>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

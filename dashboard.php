@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
 }
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <div class="dashboard-container">
     <h1>Bienvenue, <?= htmlspecialchars($_SESSION['user']['prenom']) ?> 👋</h1>
@@ -33,7 +33,7 @@ if (!isset($_SESSION['user'])) {
     </div>
     <br>
     <p>Téléchargez la documentation complète de l'application SGU au format PDF.</p>
-    <a href="files/DOCUMENTATION PROJET PISCINE.pdf" style="text-decoration: none;">
+    <a href="DOCUMENTATION PROJET PISCINE.pdf" style="text-decoration: none;">
     <button class="doc-btn">
     📄 Télécharger la documentation
     </button>
@@ -44,4 +44,4 @@ if (!isset($_SESSION['user'])) {
     
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

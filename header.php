@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SGU - Tableau de bord</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -13,7 +13,7 @@
             <a href="utilisateurs.php">Utilisateurs</a>
             <a href="comptes.php">Comptes</a>
             <a href="roles.php">Rôles</a>
-            <a href="uno/jeu.php">Jeux</a>
+            <a href="jeu.php">Jeux</a>
             <a href="logout.php">Déconnexion</a>
         </nav>
     </header>
